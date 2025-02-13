@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- links -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/input.css" />
+    <link rel="stylesheet" href="/src/output.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+    <script src="/Home.js" defer></script>
+
+    <!-- META TAG og -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Danda Lanches" />
+    <meta property="og:description" content="A melhor Hamburgueria da região" />
+    <meta property="og:site_name" content="Danda Lanches" />
+
+    <title>Danda Lanches</title>
+    <link rel="icon" href="/assets/logo.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img src="/assets/logo-3.png" alt="logo danda lanches"
+                class="w-44 h-44 rounded hover:scale-110 duration-200" />
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">DANDA LANCHES</h1>
+
+            <span class="text-white font-medium">Rua Minas Gerais Nº3640 - Nova Brasília, Joinville</span>
+
+            <div class="px-4 py-1 rounded-lg mt-5 bg-red-600" id="data-span">
+                <span class="text-white font-black flex justify-center">Delivery ou retirada</span>
+                <span class="text-white font-medium">Ter á Sab - 18:30 as 22:00</span>
+            </div>
+        </div>
+    </header>
+    <!-- FIM DO HEADER -->
+    <nav class="h-full w-full bg-red-600">
+        <ul class="flex justify-center items-center gap-4" id="custom-nav">
+            <div class="flex justify-center gap-10">
+                <li>
+                    <a href="#lanches"
+                        class="text-sm sm:text-2xl font-principal text-white hover:text-black transition duration-700">Lanches</a>
+                </li>
+                <li>
+                    <a href="#combos"
+                        class="text-sm sm:text-2xl font-principal text-white hover:text-black transition duration-700">Combos</a>
+                </li>
+                <li>
+                    <a href="#porcoes"
+                        class="text-sm sm:text-2xl font-principal text-white hover:text-black transition duration-700">Porções</a>
+                </li>
+                <li>
+                    <a href="#bebidas"
+                        class="text-sm sm:text-2xl font-principal text-white hover:text-black transition duration-700">Bebidas</a>
+                </li>
+            </div>
+        </ul>
+    </nav>
+
+    
+    </div>
+
+
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+        Conheca nosso Cardapio
+    </h2>
+    <!-- inicio menu -->
+    <main id="menu">
+        <div class="mx-auto max-w-7xl px-2 my-6">
+            <h2 class="font-bold text-3xl" id="lanches">LANCHES</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 lg:grid-cols-3 md:gap-20 mx-auto max-w-7xl px-3 mb-16"
+            id="menu-burguers"></div>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl" id="combos">COMBOS</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 md:gap-16 mx-auto max-w-7xl px-3 mb-16"
+            id="menu-combos"></div>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl" id="porcoes">PORÇÕES</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 md:gap-16 mx-auto max-w-7xl px-3 mb-16"
+            id="menu-porcoes"></div>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl" id="bebidas">BEBIDAS</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 md:gap-16 mx-auto max-w-7xl px-3 mb-16"
+            id="menu-bebidas"></div>
+    </main>
+
+    <!-- MODAL CART -->
+    <div class="bg-black/40 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px] flex flex-col max-h-[90%]">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+            <!-- Área de itens do carrinho com rolagem e limite de altura -->
+            <div id="cart-items" class="flex-1 overflow-y-auto mb-2 flex flex-col max-h-[50vh]"></div>
+
+            <p class="font-bold text-2xl">Total: <span id="cart-total">0.00</span></p>
+
+            <form id="orderForm" class="flex flex-col">
+                <p class="font-bold mt-3">Nome completo:</p>
+                <input type="text" placeholder="Digite seu nome completo" id="nomeinput"
+                    class="w-full border-2 p-1 rounded my-1" />
+
+                <p class="font-bold mt-3">Endereço rua e numero:</p>
+                <input type="text" placeholder="Digite nome da sua rua" id="address"
+                    class="w-full border-2 p-1 rounded my-1" />
+
+                <label for="delivery" class="font-bold mt-3">Selecione o bairro da entrega:</label>
+                <select name="delivery" id="delivery" class="w-full border-2 p-1 rounded my-1">
+                    <option value="3">Loteamento Minas Gerais</option>
+                    <option value="5">Nova Brasilia</option>
+                    <option value="5">Morro do Meio</option>
+                    <option value="5">São Marcos</option>
+                </select>
+
+
+                <label for="payment" class="font-bold mt-3">Qual a forma de pagamento?</label>
+                <select name="payment" id="payment" class="w-full border-2 p-1 rounded my-1">
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="Cartão de Debito">Cartão de Debito</option>
+                    <option value="Cartão de Credito">Cartão de Credito</option>
+                    <option value="Pix">Pix</option>
+                </select>
+                <p class="font-bold mt-3">Precisa de troco?</p>
+                <input type="number" placeholder="Troco pra quanto?" id="troco"
+                    class="w-full border-2 p-1 rounded my-1">
+            </form>
+
+            <p class="text-red-500 hidden" id="address-warn">
+                Digite seu Endereço completo antes de finalizar o pedido!
+            </p>
+            <p class="text-red-500 hidden" id="address-warn-order">
+                É necessario adicionar algum produto ao carrinho antes de finalizar o
+                pedido!
+            </p>
+            <p class="text-red-500 hidden" id="address-warn-name">
+                É necessario se identificar antes de finalizar o pedido!
+            </p>
+
+            <!-- Botões de ação fixos no rodapé do modal -->
+            <div class="flex items-center justify-between mt-3">
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">
+                    Finalizar pedido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIM MODAL CART -->
+
+    <!-- BUTTON CART FOOTER -->
+    <footer class="w-full bg-red-700 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+        <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+            (<span id="cart-count">0</span>) Ver meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+    <!-- FIM BUTTON CART FOOTER -->
+</body>
+
+</html>
