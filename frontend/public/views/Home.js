@@ -16,7 +16,7 @@ let cart = [];
 
 async function FetchApiDisplayProducts() {
   try {
-    const url = "http://localhost:4000/api/menu/";
+    const url = "https://api-menu-eg3i.onrender.com/api/menu";
     const response = await fetch(url);
 
     if (!response.ok) {

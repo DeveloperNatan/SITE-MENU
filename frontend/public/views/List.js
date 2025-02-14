@@ -4,7 +4,7 @@ const ModalEditdiv = document.getElementById("ModalEdit");
 
 async function FetchApiMenu() {
   try {
-    const url = "http://localhost:4000/api/menu/";
+    const url = "https://api-menu-eg3i.onrender.com/api/menu";
     const response = await fetch(url);
 
     if (!response.ok) {
@@ -64,7 +64,7 @@ async function FetchApiMenu() {
 
 async function ModalEdit(id) {
   try {
-    const url = `http://localhost:4000/api/menu/${id}`;
+    const url = `https://api-menu-eg3i.onrender.com/api/menu/${id}`;
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`API request failed, status:${response.status}`);
