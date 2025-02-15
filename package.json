@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "start": "node server/public/server.js",
+    "build": "npx tailwindcss -i frontend/public/views/src/input.css -o ../frontend/public/views/src/output.css",
+    "dev": "npx tailwindcss -i frontend/public/views/src/input.css -o ../frontend/public/views/src/output.css --watch"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "prisma": "^5.22.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.0.6"
+  }
+}
