@@ -1,8 +1,8 @@
 {
   "scripts": {
     "start": "node server/public/server.js",
-    "build": "npx tailwindcss -i frontend/public/views/src/input.css -o ../frontend/public/views/src/output.css",
-    "dev": "npx tailwindcss -i frontend/public/views/src/input.css -o ../frontend/public/views/src/output.css --watch"
+    "build": "npx tailwindcss -i frontend/public/views/src/input.css -o frontend/public/views/src/output.css",
+    "dev": "npx tailwindcss -i frontend/public/views/src/input.css -o frontend/public/views/src/output.css --watch"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
